@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Javascript (Learn 2020)</title>
+
+    <style>
+        #heading,
+        #thisForm {
+            text-align: center;
+        }
+
+        #pd-5 {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading">
+        <h1>Learn Javascript ... 25/12/2020</h1>
+        <h2>With Patiphan Channel</h2>
+        <h3>[Link Events & Form Validation]</h3>
+        <h4>ลิ้งค์อีเวนต์กับฟอร์มและการตรวจสอบฟอร์ม</h4>
+        <h5>ตรวจสอบการกรอกข้อมูลในฟอร์มกันเถอะ !</h5>
+    </div>
+
+    <form id="thisForm" onsubmit="return validateForm()" action="something.php" name="myForm" method="POST">
+        <fieldset>
+            <div id="pd-5">
+                <label>First Name</label>
+                <input type="text" name="firstName" id="firstName">
+            </div>
+            <div id="pd-5">
+                <label>Last Name</label>
+                <input type="text" name="lastName" id="lastName">
+            </div>
+            <br>
+            <input type="submit" value="submit">
+        </fieldset>
+    </form>
+
+    <script>
+        // ตรวจสอบการกรอกข้อมูลในฟอร์ม
+        function validateForm() {
+            var firstName = document.forms["myForm"]["firstName"].value;
+
+            if(firstName == null || firstName == "") {
+                alert("First name is required !");
+                return false;
+            }
+
+            if(firstName.length < 3) {
+                alert("First name must be at least 3 chars.");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Javascript (Learn 2020)</title>
+
+    <style>
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Learn Javascript ... 24/11/2020</h1>
+    <h2>With Patiphan Channel</h2>
+    <h3>[Arrays]</h3>
+    <h4>อาเรย์และการใช้เมธอด .push() , .sort() , .reverse()</h4>
+
+    <!-- <script>
+        var colors = ['red','green','blue'];
+        alert(colors[0]);
+    </script> -->
+
+    <!-- <script>
+        var colors = new Array();
+        colors[0] = 'red';
+        colors[1] = 'green';
+        colors[2] = 'blue';
+
+        alert(colors[1]);
+    </script> -->
+
+    <!-- <script>
+        var colors = new Array('red', 'green', 'blue');
+        alert(colors[2]);
+    </script> -->
+
+    <!-- <script>
+        var colors = new Array('red', 'green', 'blue');
+            colors[3] = 'orange';
+
+        alert(colors);
+    </script> -->
+
+    <!-- <script>
+        var colors = new Array('red', 'green', 'blue','orange');
+            colors.push('purple');
+
+        // alert(colors);
+        alert(colors[4]);
+    </script> -->
+
+    <!-- <script>
+        var number = [5, 77, 8, 39];
+        alert(number[0] + number[3]);
+    </script> -->
+    
+    <!-- <script>
+        var number = [5, 77, 8, 39, 84];
+        alert(number.length);
+    </script> -->
+
+    <!-- <script>
+        var character = ['A', 'Z', 'E', 'W', 'O', 'J'];
+        alert(character.sort());
+    </script> -->
+
+    <!-- <script>
+        var character = ['A', 'Z', 'E', 'W', 'O', 'J'];
+        alert(character.reverse());
+    </script> -->
+    
+    <!-- <script>
+        var number = [5, 77, 8, 39, 24, 100];
+        alert(number.sort());
+    </script> -->
+
+    <!-- <script>
+        var number = [5, 77, 8, 39, 24, 100];
+        alert(number.reverse());
+    </script> -->
+
+
+    <!-- ** พศินสอนเรียงลำดับตัวเลขใน Array (Callback function) -->
+    <script>
+        var number = [5, 77, 8, 39, 24, 100];
+        // const sorted = number.sort(function(a, b){return a - b});
+        const sorted = number.sort(function (a, b) { return b - a });
+
+        alert(sorted);
+    </script>
+
+</body>
+</html>

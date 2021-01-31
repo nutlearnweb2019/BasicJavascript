@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Javascript (Learn 2020)</title>
+
+    <style>
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Learn Javascript ... 06/12/2020</h1>
+    <h2>With Patiphan Channel</h2>
+    <h3>[Events]</h3>
+    <h4>อีเวนต์</h4>
+
+    <button onclick="this.innerHTML = 'You Clicked.'">Click Me!</button>
+    
+    <button onclick="doClick()">Pls Click Me!</button>
+    <script>
+        function doClick() {
+            alert('You Clicked.');
+        }
+    </script>
+
+    <button onclick="changeText(this)">Press it!</button>
+    <script>
+        function changeText(id) {
+            id.innerHTML = 'Pressed.';
+        }
+    </script>
+
+    <hr>
+
+    <h1 id="header">Test Header</h1>
+    <button onclick="changeHeadText(this)">Click to Change!</button>
+    <script>
+        function changeHeadText() {
+            var header = document.getElementById('header');
+            header.innerHTML = 'Header Changed!';
+        }
+    </script>
+
+    <hr>
+
+    <h2 id="timeNow">Now You See Date.</h2>
+    <button onclick="showDateNow()">Date</button>
+    <script>
+        function showDateNow() {
+            var timeNow = document.getElementById('timeNow');
+            timeNow.innerHTML = Date();
+        }
+    </script>
+
+    <hr>
+
+    <button onmouseover="showDate()" onmouseout="clearDate()">Date</button>
+    <h2 id="time"></h2>
+    <script>
+        function showDate() {
+            var time = document.getElementById('time');
+            time.innerHTML = Date();
+        }
+        function clearDate() {
+            var time = document.getElementById('time');
+            time.innerHTML = '';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Javascript (Learn 2020)</title>
+
+    <style>
+        h1, h2, h3, h4 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Learn Javascript ... 06/12/2020</h1>
+    <h2>With Patiphan Channel</h2>
+    <h3>[Object Constructor]</h3>
+    <h4>อ็อปเจ็คแบบคอนสตรักเตอร์</h4>
+
+    <script>
+
+        var apple = new Object();
+            apple.color = 'red';
+            apple.shape = 'round';
+
+            console.log(apple);
+            // console.log(apple.color);
+            // console.log(apple.shape);
+
+    </script>
+
+    <script>
+
+        var apple = new Object();
+            apple.color = 'red';
+            apple.shape = 'round';
+
+            apple.describe = function () {
+            return 'An apple is the color ' + this.color + ' and is the shape ' + this.shape;
+            }
+
+            console.log(apple.describe());
+
+    </script>
+
+    <script>
+
+        function Fruits(name, color, shape) {
+            this.name = name;
+            this.color = color;
+            this.shape = shape;
+        }
+
+        var apple = new Fruits('Apple', 'Red', 'Round');
+        var pineapple = new Fruits('Pineapple', 'Yellow', 'Ellipse');
+
+        console.log(apple);
+        console.log(pineapple);
+
+    </script>
+
+    <script>
+
+        function Fruits(name, color, shape) {
+            this.name = name;
+            this.color = color;
+            this.shape = shape;
+
+            this.describe = function() {
+                return 'A(An) ' + this.name + ' is the color ' + this.color + ' is the shape ' + this.shape;
+            }
+        }
+
+        var apple = new Fruits('Apple', 'Red', 'Round');
+        var pineapple = new Fruits('Pineapple', 'Yellow', 'Ellipse');
+
+        console.log(apple.describe());
+        console.log(pineapple.describe());
+
+    </script>
+
+    <script>
+
+        var users = [
+            {
+                name: 'Jake',
+                age: 30
+            },
+            {
+                name: 'Jink',
+                age: 26
+            },
+            {
+                name: 'Nut',
+                age: 23
+            }
+        ];
+
+        console.log(users[0]);
+        console.log(users[1]);
+        console.log(users[2]);
+
+
+    </script>
+
+</body>
+</html>
